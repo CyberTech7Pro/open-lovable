@@ -1,15 +1,1 @@
-[phases.setup]
-# mantém as versões que o Nixpacks já detectou
-nixPkgs = ["nodejs_18", "pnpm-9_x"]
 
-# **IMPORTANTE**: garanta que bash esteja presente
-aptPkgs = ["bash", "curl", "wget"]
-
-[phases.install]
-cmds = ["pnpm install --no-frozen-lockfile"]
-
-[phases.build]
-cmds = ["pnpm run build"]
-
-[start]
-cmd = "pnpm run start"
